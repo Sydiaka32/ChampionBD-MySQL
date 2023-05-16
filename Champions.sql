@@ -1,5 +1,6 @@
 Create database LeagueOfLegends;
 
+
 CREATE TABLE Champions (
 ChampionID int NOT NULL AUTO_INCREMENT,
 ChampionName varchar(255),
@@ -9,8 +10,9 @@ Position varchar(255),
 PRIMARY KEY (ChampionID)
 );
 
+
 INSERT INTO champions (ChampionName, gender, dateofbirth, position)
-VALUES ('Aatrox', 'male', '2013-06-13', 'Top');
+VALUES ('Aatrox', 'male', '2013-06-13', 'Top');  /*First insert into testing*/
 
 INSERT INTO champions (ChampionName, gender, dateofbirth, position)
 VALUES ('Ahri', 'female', '2011-12-14', 'Mid'),
@@ -21,7 +23,8 @@ VALUES ('Ahri', 'female', '2011-12-14', 'Mid'),
 ('Annie', 'female', '2009-02-21', 'Mid'),
 ('Aphelios', 'male', '2019-12-14', 'Bottom'),
 ('Aurelion Sol', 'male', '2009-03-24', 'Top, Jungle, Mid, Bottom, Support'),
-('Azir', 'female', '2014-09-16', 'Mid');
+('Azir', 'female', '2014-09-16', 'Mid');  /*Add 9 values and not all at once to avoid mistakes*/
+
 
 INSERT INTO champions (ChampionName, gender, dateofbirth, position)
 VALUES ('Bard', 'male', '2015-03-12', 'Support'),
@@ -33,6 +36,7 @@ VALUES ('Bard', 'male', '2015-03-12', 'Support'),
 ('Camille', 'female', '2016-12-07', 'Top'),
 ('Cassiopea', 'female', '2010-12-14', 'Top, Mid, Bottom'),
 ('Cho\'Gath', 'male', '2094-06-26', 'Top');
+
 
 INSERT INTO champions (ChampionName, gender, dateofbirth, position)
 VALUES ('Corki', 'male', '2009-09-19', 'Mid'),
@@ -220,3 +224,12 @@ VALUES ('Zac', 'male', '2013-03-29', 'Top, Jungle'),
 ('Zilean', 'male', '2009-04-18', 'Support'),
 ('Zoe', 'female', '2017-11-21', 'Mid'),
 ('Zyra', 'female', '2012-07-24', 'Mid, Support');
+
+
+ALTER TABLE champions RENAME COLUMN ChampionID TO ID;  /*Rename column for easier using*/
+
+ALTER TABLE champions RENAME COLUMN Championname TO Name;  /*Rename column for easier using*/
+
+UPDATE champions SET gender = VALUES(male) WHERE ChampionName = 'Azir'; /*Update information using name*/
+
+UPDATE champions SET dateofbirth='2009-06-26' WHERE ChampionID='19';  /*Update information using id*/
