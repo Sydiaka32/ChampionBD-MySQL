@@ -7,8 +7,6 @@ FOREIGN KEY (ClassID) REFERENCES Classes(ClassID),
 FOREIGN KEY (ChampionID) REFERENCES Champions(ID)
 );
 
-DROP TABLE championsclasses;
-
 CREATE TABLE ChampionsRegions (
 ChampRegionID int NOT NULL,
 ChampionID int,
@@ -17,7 +15,3 @@ PRIMARY KEY (ChampRegionID),
 FOREIGN KEY (RegionsID) REFERENCES Regions(RegionID),
 FOREIGN KEY (ChampionID) REFERENCES Champions(ID)
 );
-
-SELECT * FROM championsregions;
-
-DROP TABLE championsregions;
