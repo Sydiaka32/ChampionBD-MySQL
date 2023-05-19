@@ -233,3 +233,67 @@ ALTER TABLE champions RENAME COLUMN Championname TO Name;  /*Rename column for e
 UPDATE champions SET gender = VALUES(male) WHERE ChampionName = 'Azir'; /*Update information using name*/
 
 UPDATE champions SET dateofbirth='2009-06-26' WHERE ChampionID='19';  /*Update information using id*/
+
+ALTER TABLE Champions
+ADD COLUMN RegionID INT,
+ADD FOREIGN KEY (RegionID) REFERENCES Regions(RegionID); 
+/*
+Add the RegionID to interact with Regions table
+*/
+UPDATE champions SET RegionID = 14 WHERE Name = 'Aatrox'; /*First region update*/
+
+UPDATE champions SET RegionID = 1 
+WHERE Name IN ('Akshan', 'Amumu', 'Azir', 'Nasus', 'Rammus', 'Renekton',
+ 'Rengar', 'Sivir', 'Skarner', 'Taliah', 'Xerath', 'K''Sante');
+ 
+UPDATE champions SET RegionID = 2 
+WHERE Name IN ('Ahri', 'Akali', 'Irelia', 'Ivern', 'Jhin', 'Karma', 'Kayn',
+ 'Kennen', 'Lee Sin', 'Lillia', 'Master Yi', 'Wukong', 'Rakan',
+ 'Sett', 'Shen', 'Syndra', 'Varus', 'Xayah', 'Yasuo', 'Yone', 'Zed');
+ 
+UPDATE champions SET RegionID = 3 
+WHERE Name IN ('Aphelious', 'Aurelion Sol', 'Diana', 'Leona', 'Pantheon', 'Soraka',
+ 'Taric', 'Zoe');
+ 
+UPDATE champions SET RegionID = 4 
+WHERE Name IN ('Blitzcraknk', 'Dr.Mundo', 'Ekko', 'Janna', 'Jinx', 'Renata Glask',
+ 'Singed', 'Twitch', 'Urgot', 'Victor', 'Warwick', 'Zac', 'Ziggs', 'Zeri');
+ 
+UPDATE champions SET RegionID = 5 
+WHERE Name IN ('Anivia', 'Braum', 'Gnar', 'Gragas', 'Lissandra', 'Nunu & Willump',
+ 'Olaf', 'Ornn', 'Sejuani', 'Trundle', 'Tryndamere', 'Udyr', 'Volibear');
+ 
+UPDATE champions SET RegionID = 6 
+WHERE Name IN ('Elise', 'Gwen', 'Hecarim', 'Kalista', 'Karthus', 'Maokai',
+ 'Thresh', 'Vex', 'Viego', 'Yorick');
+ 
+UPDATE champions SET RegionID = 7 
+WHERE Name IN ('Bel''Veth', 'Cho''Gath', 'Kai''Sa', 'Kassadin', 'Kha''Zix', 'Kog''Maw',
+ 'Malzahar', 'Rek''Sai', 'Vel''Koz');
+ 
+UPDATE champions SET RegionID = 8 
+WHERE Name IN ('Cassiopea', 'Darius', 'Draven', 'Katarina', 'Kled', 'LeBlanc',
+ 'Mordekaiser', 'Riven', 'Samira', 'Sion', 'Swain', 'Talon', 'Vladimir');
+ 
+UPDATE champions SET RegionID = 9 
+WHERE Name IN ('Fiora', 'Galio', 'Garen', 'Jarvan IV', 'Kayle', 'Lucian',
+ 'Lux', 'Morgana', 'Poppy', 'Quinn', 'Shyvana', 'Sona', 'Sylas', 'Vayne', 'Xin Zhao');
+
+UPDATE champions SET RegionID = 10 
+WHERE Name IN ('Corki', 'Lulu', 'Rumble', 'Teemo', 'Tristana', 'Veigar',
+ 'Yuumi');
+ 
+UPDATE champions SET RegionID = 11 
+WHERE Name IN ('Fizz', 'Gangplank', 'Graves', 'Illaoi', 'Miss Fortune', 'Nautilus',
+ 'Pyke', 'Tahm Kench', 'Twisted Fate');
+ 
+ UPDATE champions SET RegionID = 12 
+WHERE Name IN ('Caitlyn', 'Camille', 'Ezreal', 'Heimerdinger', 'Jayce', 'Orianna',
+ 'Seraphine', 'Vi');
+ 
+ UPDATE champions SET RegionID = 13 
+WHERE Name IN ('Malphite', 'Milio', 'Neeko', 'Nidalee', 'Qyiana');
+
+ UPDATE champions SET RegionID = 14 
+WHERE Name IN ('Bard', 'Brand', 'Evelynn', 'Fiddlesticks', 
+'Jax', 'Kindred', 'Nocturne', 'Ryze', 'Shaco');
