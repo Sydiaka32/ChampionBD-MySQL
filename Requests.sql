@@ -61,4 +61,15 @@ WHERE c1.Name = 'Aatrox' AND
 (c1.gender = c2.gender OR c1.position = c2.position 
 OR c1.dateofbirth = c2.dateofbirth);
 
+/*Select all champions of female gender:*/
+SELECT Name, Gender FROM Champions
+WHERE Gender = 'female';
 
+/*Select the unique classes of champions:*/
+SELECT DISTINCT ChampType FROM Classes;
+
+/*Select all champions with their classes and regions:*/
+SELECT C.Name AS Champion, CL.ChampType, R.Region AS Region FROM Champions C
+INNER JOIN Classes CL ON C.ID = CL.ChampionID
+INNER JOIN Regions R ON C.RegionID = R.RegionID
+ORDER BY RAND();
