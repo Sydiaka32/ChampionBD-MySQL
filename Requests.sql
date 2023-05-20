@@ -37,5 +37,28 @@ SELECT Name, ChampType FROM Champions
 INNER JOIN Classes ON Champions.ID = Classes.ChampionID
 ORDER BY Name DESC;
 
+/*Select the average age of champions for each position:*/
+SELECT position, AVG(DATEDIFF(NOW(), dateofbirth)/365) AS AvgAge
+FROM champions
+GROUP BY position;
+
+/*Select the top 3 positions with the most champions:*/
+SELECT position, COUNT(*) AS TotalChampions FROM champions
+GROUP BY position
+ORDER BY TotalChampions DESC
+LIMIT 3;
+
+/*Select all champions who do not have any association with a specific region:*/
+/*SELECT Name
+FROM champions
+WHERE RegionID IS NULL;*/
+
+/*Select all champions who have at least one shared attribute
+ with the champion "Aatrox":*/
+SELECT c2.Name FROM Champions AS c1
+INNER JOIN Champions AS c2 ON c1.Name <> c2.Name
+WHERE c1.Name = 'Aatrox' AND
+(c1.gender = c2.gender OR c1.position = c2.position 
+OR c1.dateofbirth = c2.dateofbirth);
 
 
