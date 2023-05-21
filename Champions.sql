@@ -173,17 +173,6 @@ VALUES ('Soraka', 'female', '2009-02-21', 'Support'),
 ('Teemo', 'male', '2009-02-21', 'Top, Jungle');
 
 INSERT INTO champions (ChampionName, gender, dateofbirth, position)
-VALUES ('Soraka', 'female', '2009-02-21', 'Support'),
-('Swain', 'male', '2010-10-05', 'Top, Mid, Support'),
-('Sylas', 'male', '2019-01-25', 'Top, Jungle, Mid'),
-('Syndra', 'female', '2012-09-13', 'Mid'),
-('Tahm Kench', 'male', '2015-07-09', 'Top, Support'),
-('Taliyah', 'female', '2016-05-18', 'Jungle, Mid'),
-('Talon', 'male', '2011-08-24', 'Jungle, Mid'),
-('Taric', 'male', '2009-08-19', 'Support'),
-('Teemo', 'male', '2009-02-21', 'Top, Jungle');
-
-INSERT INTO champions (ChampionName, gender, dateofbirth, position)
 VALUES ('Thresh', 'male', '2013-01-23', 'Support'),
 ('Tristana', 'female', '2009-02-21', 'Mid, Bottom'),
 ('Trundle', 'male', '2010-12-01', 'Top, Jungle'),
@@ -297,3 +286,26 @@ WHERE Name IN ('Malphite', 'Milio', 'Neeko', 'Nidalee', 'Qyiana');
  UPDATE champions SET RegionID = 14 
 WHERE Name IN ('Bard', 'Brand', 'Evelynn', 'Fiddlesticks', 
 'Jax', 'Kindred', 'Nocturne', 'Ryze', 'Shaco');
+
+UPDATE champions SET position = 'Top'
+WHERE Name IN ('Dr.Mundo', 'Jayce', 'Kayle', 'Malphite', 'Poppy', 'Riven',
+ 'Rumble','Sett', 'Shen', 'Tahm Kench', 'Teemo');
+ 
+ UPDATE champions SET position = 'Jungle'
+WHERE Name IN ('Amumu', 'Diana', 'Ekko', 'Gragas', 'Graves', 'Karthus',
+ 'Lillia','Maokai', 'Rammus', 'Rengar', 'Sejuani',
+ 'Shaco', 'Talon', 'Trundle', 'Udyr', 'Volibear', 'Warwick', 'Wukong', 'Zac');
+ 
+ UPDATE champions SET position = 'Mid'
+WHERE Name IN ('Aurelion Sol', 'Cassiopea', 'Galio', 'Heimerdinger', 'Irelia',
+ 'Neeko', 'Orianna','Pantheon', 'Qiynna', 'Ryze', 'Sylas', 'Taliyah', 'Veigar',
+ 'Vel''Koz', 'Vladimir', 'Yasuo', 'Yone', 'Zed', 'Ziggs');
+ 
+ UPDATE champions SET position = 'Bottom'
+WHERE Name IN ('Kai''Sa', 'Tristana', 'Twitch');
+ 
+ UPDATE champions SET position = 'Support'
+WHERE Name IN ('Brand', 'Karma', 'Lux', 'Senna', 'Seraphine', 'Swain',
+ 'Xerath','Zyra');
+ 
+ select * from champions;
