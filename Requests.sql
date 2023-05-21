@@ -2,9 +2,9 @@
 SELECT Name, Position FROM Champions; 
 
 /*Select the count of champions for each position:*/
-/*SELECT Position, COUNT(*) FROM Champions
+SELECT Position, COUNT(*) FROM Champions
 GROUP BY Position;
-*/
+
 /*Select the list of classes and the count of champions in each class:*/
 SELECT ChampType AS Class, COUNT(*) AS Count FROM Classes
 GROUP BY ChampType;
@@ -49,9 +49,8 @@ ORDER BY TotalChampions DESC
 LIMIT 3;
 
 /*Select all champions who do not have any association with a specific region:*/
-/*SELECT Name
-FROM champions
-WHERE RegionID IS NULL;*/
+SELECT Name FROM champions
+WHERE RegionID IS NULL;
 
 /*Select all champions who have at least one shared attribute
  with the champion "Aatrox":*/
