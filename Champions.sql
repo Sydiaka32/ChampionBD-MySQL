@@ -289,7 +289,7 @@ WHERE Name IN ('Bard', 'Brand', 'Evelynn', 'Fiddlesticks',
 
 UPDATE champions SET position = 'Top'
 WHERE Name IN ('Dr.Mundo', 'Jayce', 'Kayle', 'Malphite', 'Poppy', 'Riven',
- 'Rumble','Sett', 'Shen', 'Tahm Kench', 'Teemo');
+ 'Rumble','Sett', 'Shen', 'Tahm Kench', 'Teemo', 'Jax', 'Olaf');
  
  UPDATE champions SET position = 'Jungle'
 WHERE Name IN ('Amumu', 'Diana', 'Ekko', 'Gragas', 'Graves', 'Karthus',
