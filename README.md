@@ -22,3 +22,17 @@ RegionID: A foreign key that references the ID of the region the
 champion is from.
 
 
+
+## Table "Classes"
+This table contains a classification of champions by their types and resources.
+
+Columns:
+ClassID: Unique identifier of the class.
+
+ChampionName: The name of the champion this class belongs to.
+
+ChampType: Champion type (eg "Fighter", "Mage", etc.).
+
+Resourse: A resource used by the champion (eg "Mana", "Energy", etc.).
+
+RangeType: Range type (eg "Melee" or "Ranged").
