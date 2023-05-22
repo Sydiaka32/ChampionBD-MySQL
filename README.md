@@ -51,6 +51,8 @@ This table allows you to track the regions where the champions come from.
 Each champion in the "Champions" table has a "RegionID" field that references the corresponding region ID in the "Regions" table.
 This allows for communication between champions and regions and to perform queries related to the regions of origin of champions.
 
+You can also see the relationships between the tables below, which makes it easier to use visually to write queries
+
 ![alt](https://github.com/Sydiaka32/ChampionDB-MySQL/blob/main/Diagram%20of%20relationship.png "Diagram of relationship")
 
 This database allows you to store and query information about champions in League of Legends.
